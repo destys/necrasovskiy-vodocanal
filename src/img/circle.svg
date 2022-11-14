@@ -1,0 +1,24 @@
+<svg width="96" height="70" viewBox="0 0 96 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1_5154" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="70">
+<rect width="96" height="70" rx="6" transform="matrix(1 8.74228e-08 8.74228e-08 -1 0 70)" fill="#05306A"/>
+</mask>
+<g mask="url(#mask0_1_5154)">
+<circle r="37.1983" transform="matrix(4.37114e-08 1 1 -4.37114e-08 63 35)" stroke="url(#paint0_angular_1_5154)" stroke-width="8"/>
+<path d="M118 35C118 4.62434 93.3757 -20 63 -20C32.6243 -20 7.99999 4.62435 7.99999 35C8 65.3757 32.6243 90 63 90C93.3757 90 118 65.3757 118 35Z" stroke="url(#paint1_angular_1_5154)" stroke-width="8"/>
+<path d="M63.0005 15.3487C52.1476 15.3487 43.3496 24.1467 43.3496 34.9995C43.3496 45.8524 52.1476 54.6504 63.0005 54.6504C73.8534 54.6504 82.6514 45.8524 82.6514 34.9995C82.6514 24.1467 73.8534 15.3487 63.0005 15.3487Z" stroke="url(#paint2_angular_1_5154)" stroke-width="8"/>
+</g>
+<defs>
+<radialGradient id="paint0_angular_1_5154" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(41.1983 41.1983) rotate(90) scale(41.1983)">
+<stop stop-color="#05306A"/>
+<stop offset="1" stop-color="#203A8F"/>
+</radialGradient>
+<radialGradient id="paint1_angular_1_5154" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63 35) rotate(-90) scale(59 59)">
+<stop stop-color="#05306A"/>
+<stop offset="1" stop-color="#203A8F"/>
+</radialGradient>
+<radialGradient id="paint2_angular_1_5154" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63.0005 34.9995) rotate(180) scale(23.6509 23.6509)">
+<stop stop-color="#05306A"/>
+<stop offset="1" stop-color="#203A8F"/>
+</radialGradient>
+</defs>
+</svg>

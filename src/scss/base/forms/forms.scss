@@ -1,0 +1,81 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+	}
+	&__errored {
+		opacity: 0;
+		transform: translate(0px, -100%);
+		transition: opacity 0.2s linear;
+		font-size: 0;
+
+		&.show {
+			margin-bottom: rem(20);
+			opacity: 1;
+			transform: translate(0px, 0px);
+			font-size: rem(16);
+		}
+	}
+
+	// .form__fields
+	&__fields {
+	}
+	// .form__select
+	&__select {
+	}
+	// .form__checkbox
+	&__checkbox {
+	}
+	// .form__captcha
+	&__captcha {
+		margin-top: rem(45);
+		margin-bottom: rem(40);
+	}
+	// .form__confirmation
+	&__confirmation {
+		display: none;
+	}
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+@import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

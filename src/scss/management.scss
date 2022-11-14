@@ -1,0 +1,103 @@
+.management {
+    // .management__container
+    &__container {
+    }
+    // .management__title
+    &__title {
+    }
+    // .management__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+        gap: rem(20);
+
+        @media (min-width: $mobile) {
+            grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+        }
+    }
+    // .management__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+        border: 1px solid #909090;
+        border-radius: 6px;
+        overflow: hidden;
+        text-align: center;
+
+        @media (min-width: em(360)) {
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+}
+.item-management {
+    // .item-management__photo
+    &__photo {
+        flex: 0 0 rem(150);
+        img {
+            width: rem(150);
+            height: rem(200);
+            object-fit: cover;
+        }
+
+        @media (min-width: $tablet) {
+            flex: 0 0 rem(200);
+            img {
+                width: rem(200);
+                height: rem(200);
+                object-fit: cover;
+            }
+        }
+    }
+    // .item-management__content
+    &__content {
+        padding: rem(21) rem(28) rem(21) 0;
+        font-size: rem(16);
+    }
+    // .item-management__name
+    &__name {
+        margin-bottom: rem(5);
+        font-weight: 600;
+        font-size: rem(18);
+        color: $blue;
+    }
+    // .item-management__department
+    &__department {
+        color: $blue;
+        font-weight: 600;
+
+        ._hall-of-fame & {
+            margin-top: 30px;
+        }
+    }
+    // .item-management__position
+    &__position {
+        margin-bottom: rem(18);
+    }
+    // .item-management__contacts-title
+    &__contacts-title {
+        color: $blue;
+        font-weight: 600;
+
+        ._hall-of-fame & {
+            display: none;
+        }
+    }
+    // .item-management__phone
+    &__phone {
+
+        ._hall-of-fame & {
+            display: none;
+        }
+    }
+    // .item-management__email
+    &__email {
+
+        ._hall-of-fame & {
+            display: none;
+        }
+    }
+}

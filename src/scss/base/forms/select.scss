@@ -1,0 +1,182 @@
+// <SELECT>
+// Снипет (HTML): sel
+.select {
+	position: relative;
+	font-size: rem(16);
+	// .select__body
+	&__body {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+		margin-bottom: rem(25);
+		color: inherit;
+		text-align: left;
+		border-bottom: 1px solid $grey;
+		background-color: #fff;
+		cursor: pointer;
+		width: 100%;
+		border-radius: 4px;
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		align-items: center;
+		padding-bottom: rem(6);
+		gap: rem(10);
+		> * {
+			flex: 1 1 auto;
+		}
+		&:after {
+			content: "";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: rem(15);
+			flex: 0 0 15px;
+			width: rem(15);
+			transition: all 0.3s ease 0s;
+			background: url("@img/ar-dwn.svg") center center no-repeat;
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		position: absolute;
+		top: 29px;
+		border-radius: 0 0 4px 4px;
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		padding: 10px 0px 5px 0px;
+	}
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: 200px;
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		width: 100%;
+		display: block;
+		text-align: left;
+		cursor: pointer;
+		padding: 15px;
+		border-bottom: 1px solid $grey;
+		color: inherit;
+		&._select-selected {
+			background-color: #eee;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #d9d9d9;
+			}
+		}
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__asset {
+	}
+	&__text {
+	}
+
+	// Состояния селекта
+	&._select-open {
+		z-index: 5;
+	}
+	&._select-disabled {
+	}
+	&._select-active {
+	}
+	&._select-focus {
+	}
+	&._select-multiple {
+	}
+	&._select-checkbox {
+	}
+}
+
+// Тег
+._select-tag {
+	cursor: pointer;
+}
+
+.select_sidebar-gallery__select {
+	.select__title {
+		padding: rem(14) rem(30);
+	}
+
+	.select__options {
+		top: rem(54);
+	}
+
+	.select__value {
+		padding-bottom: 0;
+	}
+
+	&:first-child {
+		.select__title {
+			background-color: $blue;
+			color: #fff;
+		}
+
+		.select__value {
+			&::after {
+				background: url("@img/ar-dwn-white.svg") center center no-repeat;
+			}
+		}
+	}
+
+	&:last-child {
+		.select__title {
+			border: 1px solid;
+		}
+	}
+}
+
+.select_sel_map {
+	.select__title {
+		padding: rem(14) rem(20);
+		border: 1px solid #01112f;
+	}
+
+	.select__value {
+		padding-bottom: 0;
+	}
+
+	.select__options {
+		top: rem(46);
+		border: 1px solid #01112f;
+		border-top: 0;
+	}
+}

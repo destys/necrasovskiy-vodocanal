@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Вакансии"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="vacancies">
+				<div class="vacancies__container">
+					<div class="vacancies__contacts contacts-vacancies">
+						<div class="contacts-vacancies__title">Отдел кадров:</div>
+						<div class="contacts-vacancies__info">+7 496 222-72-70 доб. 229, 244, 253 | kadry@dm-vk.ru</div>
+					</div>
+					<h1 class="vacancies__title _section-title">Вакансии</h1>
+					<div class="vacancies__list">
+						<div class="vacancies__item item-vacancies item-vacancies_1">
+							<div class="item-vacancies__content">
+								<div class="item-vacancies__date">29.06.2022</div>
+								<a href="#" class="item-vacancies__title">Аппаратчик реагентного хозяйства</a>
+								<div class="item-vacancies__place"></div>
+								<a href="#" class="item-vacancies__more">Подробнее</a>
+							</div>
+							<div class="item-vacancies__city"
+								data-da=".item-vacancies_1 .item-vacancies__place, 767, 1">г. Дмитров</div>
+							<div class="item-vacancies__price"
+								data-da=".item-vacancies_1 .item-vacancies__place, 767, 1">от 30 000 руб</div>
+						</div>
+						<div class="vacancies__item item-vacancies item-vacancies_2">
+							<div class="item-vacancies__content">
+								<div class="item-vacancies__date">29.06.2022</div>
+								<a href="#" class="item-vacancies__title">Аппаратчик реагентного хозяйства</a>
+								<div class="item-vacancies__place"></div>
+								<a href="#" class="item-vacancies__more">Подробнее</a>
+							</div>
+							<div class="item-vacancies__city"
+								data-da=".item-vacancies_2 .item-vacancies__place, 767, 1">г.
+								Дмитров</div>
+							<div class="item-vacancies__price"
+								data-da=".item-vacancies_2 .item-vacancies__place, 767, 1">
+								от 30 000 руб</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

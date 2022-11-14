@@ -1,0 +1,78 @@
+//====================================================================================================
+.footer {
+    background-color: #f6f6f6;
+
+    // .footer__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        padding-top: rem(70);
+        padding-bottom: rem(65);
+
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    // .footer__logo
+    &__logo {
+        margin-right: rem(20);
+        font-size: rem(16);
+    }
+    // .footer__contacts
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            gap: rem(45);
+        }
+    }
+}
+.logo-footer {
+    // .logo-footer__logo
+    &__logo {
+        margin-bottom: rem(27);
+        line-height: math.div(19, 16);
+    }
+    // .logo-footer__info
+    &__info {
+    }
+}
+.contacts-footer {
+    // .contacts-footer__item
+    &__item {
+        &._address {
+            margin-bottom: rem(20);
+        }
+        &._buh,
+        &._address {
+            margin-top: rem(20);
+        }
+    }
+    // .contacts-footer__title
+    &__title {
+        margin-bottom: rem(5);
+        font-weight: 600;
+        color: $blue_dark;
+        font-size: rem(16);
+
+        @media (min-width: $mobile) {
+            margin-bottom: rem(20);
+            font-size: rem(18);
+        }
+    }
+    // .contacts-footer__content
+    &__content {
+        a {
+            color: $blue_light;
+        }
+    }
+}
+
+//====================================================================================================

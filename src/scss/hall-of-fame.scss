@@ -1,0 +1,47 @@
+.hall-of-fame {
+    // .hall-of-fame__container
+    &__container {
+    }
+    // .hall-of-fame__title
+    &__title {
+    }
+    // .hall-of-fame__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+        gap: rem(20);
+
+        @media (min-width: $mobileSmall) {
+            grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
+        }
+    }
+    // .hall-of-fame__item
+    &__item {
+        border: 1px solid $grey;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
+.item-hall-of-fame {
+    // .item-hall-of-fame__photo
+    &__photo {
+        height: rem(330);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    // .item-hall-of-fame__name
+    &__name {
+        padding: rem(21) rem(23) rem(15);
+        font-weight: 600;
+        color: $blue;
+        text-align: center;
+    }
+    // .item-hall-of-fame__position
+    &__position {
+        margin-bottom: rem(27);
+        text-align: center;
+    }
+}

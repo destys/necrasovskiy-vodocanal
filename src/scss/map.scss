@@ -1,0 +1,229 @@
+.map {
+    // .map__container
+    &__container {
+    }
+    // .map__content
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    // .map__actions
+    &__actions {
+        @media (min-width: em(1279)) {
+            flex: 0 0 50%;
+            max-width: rem(705);
+        }
+    }
+    // .map__places
+    &__places {
+    }
+    // .map__services
+    &__services {
+        padding: rem(36) rem(28);
+    }
+    // .map__image
+    &__image {
+        display: none;
+
+        @media (min-width: em(1279)) {
+            display: flex;
+            flex: 1 1 auto;
+            svg {
+                margin: 0 auto;
+
+                path {
+                    fill: #fff;
+                    cursor: pointer;
+                    transition: fill 0.2s linear;
+
+                    &._active {
+                        fill: $blue_dark;
+                    }
+                }
+
+                mask {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.actions-map {
+    // .actions-map__title
+    &__title {
+        padding-bottom: 0 !important;
+        border-bottom: 0 !important;
+    }
+}
+.places-map {
+    // .places-map__item
+    &__item {
+        margin-bottom: rem(20);
+        padding: rem(36) rem(30);
+        background-color: $blue_dark;
+        border-radius: 6px;
+        color: #fff;
+        position: relative;
+
+        display: none;
+
+        &._show {
+            display: block;
+        }
+
+        &::after {
+            content: "";
+            background: url("@img/map/map-circle.png") 0 0 no-repeat;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: rem(131);
+            height: rem(139);
+        }
+    }
+}
+.item-places-map {
+    // .item-places-map__title
+    &__title {
+        margin-bottom: rem(21);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    // .item-places-map__content
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(20);
+        font-size: rem(16);
+    }
+    // .item-places-map__contacts
+    &__contacts {
+        flex: 0 0 30%;
+        p {
+            font-weight: 600;
+
+            span {
+                display: block;
+                &:last-child {
+                    font-weight: 400;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+    // .item-places-map__ads
+    &__ads {
+        flex: 0 0 30%;
+        p {
+            font-weight: 600;
+
+            span {
+                display: block;
+                &:last-child {
+                    font-weight: 400;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+    // .item-places-map__schedule
+    &__schedule {
+        flex: 0 0 30%;
+        p {
+            display: flex;
+            gap: rem(18);
+            font-weight: 600;
+
+            span {
+                &:first-child {
+                    flex: 0 0 rem(75);
+                }
+                &:last-child {
+                    font-weight: 400;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+}
+.services-map {
+    // .services-map__title
+    &__title {
+        margin-bottom: rem(21);
+        font-weight: 600;
+        color: $blue;
+        text-transform: uppercase;
+    }
+    // .services-map__list
+    &__list {
+        display: none;
+
+        &._show {
+            display: block;
+        }
+    }
+    // .services-map__item
+    &__item {
+        display: grid;
+        grid-template-columns: minmax(rem(100), 1fr) rem(150) rem(150);
+        padding: rem(5) 0;
+        border-bottom: 1px solid $grey;
+        font-size: rem(16);
+    }
+}
+.item-map-service {
+    // .item-map-service_first
+    &_first {
+        color: $blue;
+        font-size: rem(14);
+
+        * {
+            border-left: 0 !important;
+        }
+    }
+    // .item-map-service__name
+    &__name {
+    }
+    // .item-map-service__water-supply
+    &__water-supply {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $grey;
+
+        img {
+            display: none;
+            width: rem(12);
+            flex: 0 0 rem(12);
+            height: rem(12);
+        }
+
+        &._check img {
+            display: block;
+        }
+    }
+    // .item-map-service__supportion
+    &__supportion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $grey;
+
+        img {
+            display: none;
+            width: rem(12);
+            flex: 0 0 rem(12);
+            height: rem(12);
+        }
+
+        &._check img {
+            display: block;
+        }
+    }
+}

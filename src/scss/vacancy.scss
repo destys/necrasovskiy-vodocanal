@@ -1,0 +1,73 @@
+.vacancy {
+    // .vacancy__container
+    &__container {
+    }
+    // .vacancy__header
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding-bottom: rem(35);
+        border-bottom: 1px solid $grey;
+
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    // .vacancy__title
+    &__title {
+    }
+    // .vacancy__price
+    &__price {
+        color: $mainColor;
+    }
+    // .vacancy__content
+    &__content {
+    }
+    // .vacancy__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @media (min-width: $mobileSmall) {
+            flex-direction: row;
+        }
+
+        @media (min-width: $mobile) {
+            flex-wrap: nowrap;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+    // .vacancy__subtitle
+    &__subtitle {
+        margin-top: rem(70);
+        margin-bottom: rem(40);
+        font-weight: 600;
+        font-size: rem(24);
+        color: $blue;
+    }
+    // .vacancy__button
+    &__button {
+        margin-top: rem(40);
+    }
+}
+.item-vacancy {
+    // .item-vacancy__title
+    &__title {
+        font-weight: 600;
+        color: $blue;
+
+        @media (min-width: $mobileSmall) {
+            flex: 0 0 rem(280);
+        }
+    }
+    // .item-vacancy__text
+    &__text {
+    }
+}

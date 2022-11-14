@@ -1,0 +1,24 @@
+// Заголовки, общие БЭМ блоки и проче...
+a {
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: $blue_light;
+    }
+}
+
+._section-title {
+    @include adaptiveValue("margin-bottom", 65, 30, 1440, 767, 1);
+    font-weight: 600;
+    @include adaptiveValue("font-size", 28, 24, 1024, 767, 1);
+    color: $blue_dark;
+}
+
+h1._section-title {
+    padding-bottom: rem(35);
+    border-bottom: 1px solid $grey;
+}
+
+section {
+    @include adaptiveValue("margin-bottom", 144, 40, 1620, 474, 1);
+}
