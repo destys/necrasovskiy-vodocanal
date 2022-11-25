@@ -22,3 +22,66 @@ h1._section-title {
 section {
     @include adaptiveValue("margin-bottom", 144, 40, 1620, 474, 1);
 }
+
+.entry-content {
+    p {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    a {
+        color: $blue;
+    }
+
+    ul {
+        margin-bottom: rem(30);
+
+        li {
+            list-style: inside !important;
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+
+            &::marker {
+                color: $blue;
+            }
+        }
+    }
+
+    ol {
+        li {
+            list-style: decimal inside;
+
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+
+        ul {
+            margin-bottom: rem(10);
+            margin-left: rem(20);
+        }
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: rem(28);
+    }
+
+    h2,
+    h3,
+    h4 {
+        margin-bottom: rem(30);
+        color: $blue_dark;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: rem(22);
+    }
+
+    h4 {
+        font-size: $fontSize;
+    }
+}

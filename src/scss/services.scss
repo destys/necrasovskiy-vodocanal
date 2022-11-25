@@ -65,7 +65,7 @@
         border-left: 0;
 
         @media (min-width: $mobile) {
-            display: block;
+            display: flex;
         }
     }
     // .item-services__title
