@@ -25,6 +25,7 @@ section {
 
 .entry-content {
     p {
+        text-align: justify;
         &:not(:last-child) {
             margin-bottom: rem(20);
         }

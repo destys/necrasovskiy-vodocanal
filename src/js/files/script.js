@@ -55,7 +55,6 @@ if (popupForms.length) {
         let confirmationForm = form.querySelector('.confirmation-form');
         let formInputs = form.querySelectorAll('[data-required]');
         let formErrorField = form.querySelector('.form__errored');
-
         buttonNext.addEventListener('click', () => {
             formInputs.forEach(inp => {
                 if (inp.value != '') {

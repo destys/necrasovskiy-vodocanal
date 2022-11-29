@@ -95,6 +95,8 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
+        text-align: justify;
+
         @media (min-width: $tablet) {
             display: -webkit-box;
             -webkit-line-clamp: 5;

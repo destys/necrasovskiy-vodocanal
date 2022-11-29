@@ -184,3 +184,29 @@
 		</div>
 	</div>
 </div>
+
+<div id="summary" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content summary">
+			<div class="popup__header">
+				<div class="popup__title">Отправить резюме</div>
+				<button data-close type="button" class="popup__close"></button>
+			</div>
+			<form action="#" class="form">
+				<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя*"
+					class="input">
+				<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Телефон*"
+					class="input">
+				<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="Email"
+					class="input">
+				<textarea autocomplete="off" name="form[]" placeholder="Немного о себе" data-error="Ошибка"
+					class="input"></textarea>
+				<label for="file" class="summary__label">
+					Загрузите резюме
+					<input type="file" name="file" id="summary-id">
+				</label>
+				<button type="submit" class="button">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
