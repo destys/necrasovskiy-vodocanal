@@ -55,16 +55,18 @@ if (popupForms.length) {
         let confirmationForm = form.querySelector('.confirmation-form');
         let formInputs = form.querySelectorAll('[data-required]');
         let formErrorField = form.querySelector('.form__errored');
-        buttonNext.addEventListener('click', () => {
-            formInputs.forEach(inp => {
-                if (inp.value != '') {
-                    formFields.style.display = 'none';
-                    confirmationForm.style.display = 'block';
-                } else {
-                    formErrorField.classList.add('show');
-                }
+        if (buttonNext) {
+            buttonNext.addEventListener('click', () => {
+                formInputs.forEach(inp => {
+                    if (inp.value != '') {
+                        formFields.style.display = 'none';
+                        confirmationForm.style.display = 'block';
+                    } else {
+                        formErrorField.classList.add('show');
+                    }
+                })
             })
-        })
+        }
     })
 }
 
@@ -91,9 +93,6 @@ if (serviceOrderBtns.length) {
 const mapPathes = document.querySelectorAll('.map__image [data-num-place]'),
     contactPlaces = document.querySelectorAll('[data-place-num]'),
     serviceMapList = document.querySelectorAll('.services-map__list'),
-    mapPlaces = document.querySelectorAll('.select_sel_map .select__option'),
-    mapSearch = document.querySelector('.select__input');
-
 if (mapPathes.length) {
 
     mapPathes.forEach(path => {
@@ -107,15 +106,27 @@ if (mapPathes.length) {
         })
 
     })
+    /* document.addEventListener('mousemove', () => console.log(mapPlaces.length)) */
 
-    function mapSearchPlace() {
-        mapPlaces.forEach(place => {
-            let text = place.innerHTML;
-            text.toLowerCase().includes(mapSearch.value.toLowerCase()) ? place.style.display = 'block' : place.style.display = 'none';
-        })
-    }
+    document.addEventListener('click', () => {
 
-    mapSearch.addEventListener('input', mapSearchPlace);
+        let mapPlaces = document.querySelectorAll('.select_sel_map .select__option');
+        let mapSearch = document.querySelector('.select__input');
+
+        function mapSearchPlace() {
+
+            console.log('mapSearch: ', mapSearch.value);
+
+            mapPlaces.forEach(place => {
+                let text = place.innerHTML;
+                text.toLowerCase().includes(mapSearch.value.toLowerCase()) ? place.style.display = 'block' : place.style.display = 'none';
+            })
+        }
+
+        mapSearch.addEventListener('input', mapSearchPlace);
+    })
+
+
 
     document.addEventListener('click', () => {
         mapPlaces.forEach(place => place.style.display = 'block');
