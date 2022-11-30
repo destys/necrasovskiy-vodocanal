@@ -40,6 +40,7 @@ section {
 
         li {
             list-style: inside !important;
+            text-align: justify;
             &:not(:last-child) {
                 margin-bottom: rem(10);
             }
@@ -53,6 +54,7 @@ section {
     ol {
         li {
             list-style: decimal inside;
+            text-align: justify;
 
             &:not(:last-child) {
                 margin-bottom: rem(10);
@@ -84,5 +86,22 @@ section {
 
     h4 {
         font-size: $fontSize;
+    }
+}
+
+#dmitrov,
+#dmitrov2 {
+    fill: $blue;
+}
+
+[data-num-place="8"] {
+    &._active {
+        & + #dmitrov {
+            fill: #fff !important;
+
+            & + #dmitrov2 {
+                fill: #fff !important;
+            }
+        }
     }
 }

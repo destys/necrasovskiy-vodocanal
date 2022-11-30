@@ -93,6 +93,9 @@ if (serviceOrderBtns.length) {
 const mapPathes = document.querySelectorAll('.map__image [data-num-place]'),
     contactPlaces = document.querySelectorAll('[data-place-num]'),
     serviceMapList = document.querySelectorAll('.services-map__list'),
+    mapPlaces = document.querySelectorAll('.select_sel_map .select__option'),
+    mapSearch = document.querySelector('.select__input');
+
 if (mapPathes.length) {
 
     mapPathes.forEach(path => {
@@ -106,27 +109,18 @@ if (mapPathes.length) {
         })
 
     })
-    /* document.addEventListener('mousemove', () => console.log(mapPlaces.length)) */
 
-    document.addEventListener('click', () => {
+    function mapSearchPlace() {
 
-        let mapPlaces = document.querySelectorAll('.select_sel_map .select__option');
-        let mapSearch = document.querySelector('.select__input');
+        console.log('mapSearch: ', mapSearch.value);
 
-        function mapSearchPlace() {
+        mapPlaces.forEach(place => {
+            let text = place.innerHTML;
+            text.toLowerCase().includes(mapSearch.value.toLowerCase()) ? place.style.display = 'block' : place.style.display = 'none';
+        })
+    }
 
-            console.log('mapSearch: ', mapSearch.value);
-
-            mapPlaces.forEach(place => {
-                let text = place.innerHTML;
-                text.toLowerCase().includes(mapSearch.value.toLowerCase()) ? place.style.display = 'block' : place.style.display = 'none';
-            })
-        }
-
-        mapSearch.addEventListener('input', mapSearchPlace);
-    })
-
-
+    mapSearch.addEventListener('input', mapSearchPlace);
 
     document.addEventListener('click', () => {
         mapPlaces.forEach(place => place.style.display = 'block');
