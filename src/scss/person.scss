@@ -44,9 +44,17 @@
     }
     // .info-person__position
     &__position {
-        margin-bottom: rem(40);
+        margin-bottom: rem(20);
         font-size: rem(21);
         color: $grey;
+    }
+    // .info-person__phone
+    &__phone {
+        margin-bottom: rem(20);
+    }
+    // .info-person__email
+    &__email {
+        margin-bottom: rem(40);
     }
     // .info-person__text
     &__text {

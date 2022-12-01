@@ -100,6 +100,7 @@ if (mapPathes.length) {
 
     mapPathes.forEach(path => {
         path.addEventListener('click', () => {
+            document.querySelector('.select__value input').placeholder = 'Введите адрес населенного пункта';
             mapPathes.forEach(path => path.classList.remove('_active'));
             path.classList.add('_active')
             contactPlaces.forEach(place => place.classList.remove('_show'));

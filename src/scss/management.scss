@@ -41,6 +41,7 @@
             width: rem(150);
             height: rem(200);
             object-fit: cover;
+            object-position: top;
         }
 
         @media (min-width: $tablet) {
