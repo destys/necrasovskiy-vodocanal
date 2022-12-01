@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Сотрудник"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="person">
+				<div class="person__container">
+					<div class="person__photo" data-da=".info-person, 767, 0">
+						<img src="https://i.pinimg.com/originals/fc/35/9d/fc359d9d31af9aff66d5121561bdd731.jpg" alt="">
+					</div>
+					<div class="person__info info-person">
+						<h1 class="info-person__name">Иванов Иван Иванович</h1>
+						<div class="info-person__position">Главный среди главных</div>
+						<div class="info-person__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis commodi a aperiam ratione
+							</p>
+							<p>atque! Amet, earum dicta. Minus hic ipsam aperiam, tempore pariatur aut inventore
+								perspiciatis deserunt ab reiciendis quod.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
