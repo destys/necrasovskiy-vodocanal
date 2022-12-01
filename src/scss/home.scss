@@ -327,6 +327,15 @@
         margin-bottom: rem(10);
         font-weight: 600;
         color: $blue_dark;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        min-height: rem(43);
     }
 
     // .news-slide__excerpt
