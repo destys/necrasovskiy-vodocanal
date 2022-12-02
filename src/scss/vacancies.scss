@@ -78,6 +78,10 @@
     &__place {
         display: flex;
         justify-content: space-between;
+
+        @media (min-width: $mobile) {
+            display: none;
+        }
     }
     // .item-vacancies__more
     &__more {

@@ -87,6 +87,13 @@ section {
     h4 {
         font-size: $fontSize;
     }
+
+    .wp-block-image {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: rem(40);
+    }
 }
 
 #dmitrov,
