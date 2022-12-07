@@ -35,6 +35,10 @@
             }
         }
 
+        .item-services__title {
+            justify-content: flex-start;
+        }
+
         &:last-child {
             border-bottom: 1px solid $grey;
         }
