@@ -1,12 +1,14 @@
 .map {
+
     // .map__container
-    &__container {
-    }
+    &__container {}
+
     // .map__content
     &__content {
         display: flex;
         justify-content: space-between;
     }
+
     // .map__actions
     &__actions {
         @media (min-width: em(1279)) {
@@ -14,13 +16,18 @@
             max-width: rem(705);
         }
     }
+
     // .map__places
-    &__places {
-    }
+    &__places {}
+
     // .map__services
     &__services {
-        padding: rem(36) rem(28);
+
+        @media (min-width:$mobile) {
+            padding: rem(36) rem(28);
+        }
     }
+
     // .map__image
     &__image {
         display: none;
@@ -28,6 +35,7 @@
         @media (min-width: em(1279)) {
             display: flex;
             flex: 1 1 auto;
+
             svg {
                 margin: 0 auto;
 
@@ -48,14 +56,18 @@
         }
     }
 }
+
 .actions-map {
+
     // .actions-map__title
     &__title {
         padding-bottom: 0 !important;
         border-bottom: 0 !important;
     }
 }
+
 .places-map {
+
     // .places-map__item
     &__item {
         margin-bottom: rem(20);
@@ -82,57 +94,74 @@
         }
     }
 }
+
 .item-places-map {
+
     // .item-places-map__title
     &__title {
         margin-bottom: rem(21);
         font-weight: 600;
         text-transform: uppercase;
     }
+
     // .item-places-map__content
     &__content {
         display: flex;
         justify-content: space-between;
         gap: rem(20);
         font-size: rem(16);
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+        }
     }
+
     // .item-places-map__contacts
     &__contacts {
         flex: 0 0 30%;
+
         p {
             font-weight: 600;
 
             span {
                 display: block;
+
                 &:last-child {
                     font-weight: 400;
                 }
             }
+
             &:not(:last-child) {
                 margin-bottom: rem(15);
             }
         }
     }
+
     // .item-places-map__ads
     &__ads {
         flex: 0 0 30%;
+
         p {
             font-weight: 600;
 
             span {
                 display: block;
+
                 &:last-child {
                     font-weight: 400;
                 }
             }
+
             &:not(:last-child) {
                 margin-bottom: rem(15);
             }
         }
     }
+
     // .item-places-map__schedule
     &__schedule {
         flex: 0 0 30%;
+
         p {
             display: flex;
             gap: rem(18);
@@ -142,17 +171,21 @@
                 &:first-child {
                     flex: 0 0 rem(75);
                 }
+
                 &:last-child {
                     font-weight: 400;
                 }
             }
+
             &:not(:last-child) {
                 margin-bottom: rem(15);
             }
         }
     }
 }
+
 .services-map {
+
     // .services-map__title
     &__title {
         margin-bottom: rem(21);
@@ -160,6 +193,7 @@
         color: $blue;
         text-transform: uppercase;
     }
+
     // .services-map__list
     &__list {
         display: none;
@@ -168,16 +202,23 @@
             display: block;
         }
     }
+
     // .services-map__item
     &__item {
         display: grid;
-        grid-template-columns: minmax(rem(100), 1fr) rem(150) rem(150);
+        grid-template-columns: minmax(rem(100), 1fr) rem(50) rem(50);
         padding: rem(5) 0;
         border-bottom: 1px solid $grey;
         font-size: rem(16);
+
+        @media (min-width:$mobile) {
+            grid-template-columns: minmax(rem(100), 1fr) rem(150) rem(150);
+        }
     }
 }
+
 .item-map-service {
+
     // .item-map-service_first
     &_first {
         color: $blue;
@@ -187,9 +228,20 @@
             border-left: 0 !important;
         }
     }
+
     // .item-map-service__name
     &__name {
+        height: 100%;
+
+        @media (max-width:$mobile) {
+            .item-map-service_first & {
+                display: flex;
+                align-items: center;
+                font-size: rem(10);
+            }
+        }
     }
+
     // .item-map-service__water-supply
     &__water-supply {
         display: flex;
@@ -197,6 +249,9 @@
         align-items: center;
         border-left: 1px solid $grey;
 
+
+        height: 100%;
+
         img {
             display: none;
             width: rem(12);
@@ -207,7 +262,16 @@
         &._check img {
             display: block;
         }
+
+        @media (max-width:$mobile) {
+            .item-map-service_first & {
+                transform: rotate(90deg);
+                height: rem(90);
+                font-size: rem(10);
+            }
+        }
     }
+
     // .item-map-service__supportion
     &__supportion {
         display: flex;
@@ -215,6 +279,8 @@
         align-items: center;
         border-left: 1px solid $grey;
 
+        height: 100%;
+
         img {
             display: none;
             width: rem(12);
@@ -224,6 +290,14 @@
 
         &._check img {
             display: block;
+        }
+
+        @media (max-width:$mobile) {
+            .item-map-service_first & {
+                transform: rotate(90deg);
+                height: rem(90);
+                font-size: rem(10);
+            }
         }
     }
 }

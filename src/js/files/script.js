@@ -1,7 +1,11 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile } from "./functions.js";
+import {
+    isMobile
+} from "./functions.js";
 // Подключение списка активных модулей
-import { flsModules } from "./modules.js";
+import {
+    flsModules
+} from "./modules.js";
 
 //========================================================================================================================================================
 
@@ -25,8 +29,19 @@ if (menuLinks.length) {
                 }, 2000);
             })
         } else {
-            link.addEventListener('click', () => {
-                link.classList.add('_hover');
+            link.addEventListener('click', (e) => {
+                const subLiElements = link.querySelectorAll('.sub-menu>li');
+                if (e.target.parentElement.classList.contains('_parent')) {
+                    link.classList.toggle('_hover')
+                }
+                if (subLiElements.length) {
+                    subLiElements.forEach(sublink => {
+                        sublink.addEventListener('click', (e) => {
+                            e.target.classList.contains('menu-item-has-children') ? sublink.classList.toggle('_hover') : null;
+                            console.log('e.target: ', e.target);
+                        });
+                    })
+                }
             })
         }
     })
@@ -93,10 +108,16 @@ if (serviceOrderBtns.length) {
 const mapPathes = document.querySelectorAll('.map__image [data-num-place]'),
     contactPlaces = document.querySelectorAll('[data-place-num]'),
     serviceMapList = document.querySelectorAll('.services-map__list'),
-    mapPlaces = document.querySelectorAll('.select_sel_map .select__option'),
-    mapSearch = document.querySelector('.select__input');
+    mapPlaces = document.querySelectorAll('.select__option'),
+    mapSearch = document.querySelector('.select__input'),
+    selOptions = document.querySelector('.select__options'),
+    selTitle = document.querySelector('.select__title');
 
 if (mapPathes.length) {
+
+    selTitle.addEventListener('click', () => {
+        selOptions.removeAttribute('hidden');
+    })
 
     mapPathes.forEach(path => {
         path.addEventListener('click', () => {
@@ -112,35 +133,34 @@ if (mapPathes.length) {
     })
 
     function mapSearchPlace() {
-
-        console.log('mapSearch: ', mapSearch.value);
-
         mapPlaces.forEach(place => {
             let text = place.innerHTML;
             text.toLowerCase().includes(mapSearch.value.toLowerCase()) ? place.style.display = 'block' : place.style.display = 'none';
         })
     }
 
+
+    mapPlaces.forEach(place => {
+        place.addEventListener('click', () => {
+            selOptions.setAttribute('hidden', true);
+            let country = place.dataset.numPlace;
+
+            contactPlaces.forEach(place => place.classList.remove('_show'));
+            serviceMapList.forEach(place => place.classList.remove('_show'));
+            contactPlaces[country - 1].classList.add('_show');
+            serviceMapList[country - 1].classList.add('_show');
+
+            mapPathes.forEach(path => {
+                path.dataset.numPlace == country ? path.classList.add('_active') : path.classList.remove('_active');
+            })
+        })
+    })
+
     mapSearch.addEventListener('input', mapSearchPlace);
 
     document.addEventListener('click', () => {
         mapPlaces.forEach(place => place.style.display = 'block');
     })
-
-    document.addEventListener("selectCallback", (function (e) {
-        const currentSelect = e.detail.select;
-        let country = currentSelect.options[currentSelect.selectedIndex].dataset.numPlace;
-
-        contactPlaces.forEach(place => place.classList.remove('_show'));
-        serviceMapList.forEach(place => place.classList.remove('_show'));
-        contactPlaces[country - 1].classList.add('_show');
-        serviceMapList[country - 1].classList.add('_show');
-
-        mapPathes.forEach(path => {
-            path.dataset.numPlace == country ? path.classList.add('_active') : path.classList.remove('_active');
-        })
-    }));
 }
 
 //========================================================================================================================================================
-
