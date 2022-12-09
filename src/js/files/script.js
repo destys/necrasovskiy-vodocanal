@@ -33,14 +33,14 @@ if (menuLinks.length) {
                 const subLiElements = link.querySelectorAll('.sub-menu>li');
                 if (e.target.parentElement.classList.contains('_parent')) {
                     link.classList.toggle('_hover')
-                }
-                if (subLiElements.length) {
-                    subLiElements.forEach(sublink => {
-                        sublink.addEventListener('click', (e) => {
-                            e.target.classList.contains('menu-item-has-children') ? sublink.classList.toggle('_hover') : null;
-                            console.log('e.target: ', e.target);
-                        });
-                    })
+
+                    if (subLiElements.length) {
+                        subLiElements.forEach(sublink => {
+                            sublink.addEventListener('click', (e) => {
+                                e.target.classList.contains('menu-item-has-children') ? sublink.classList.toggle('_hover') : null;
+                            });
+                        })
+                    }
                 }
             })
         }
@@ -60,7 +60,7 @@ if (popupClose.length) {
         })
     })
 }
-
+/* 
 const popupForms = document.querySelectorAll('.popup .form');
 
 if (popupForms.length) {
@@ -83,7 +83,7 @@ if (popupForms.length) {
             })
         }
     })
-}
+} */
 
 //========================================================================================================================================================
 
@@ -164,3 +164,11 @@ if (mapPathes.length) {
 }
 
 //========================================================================================================================================================
+
+
+document.addEventListener( 'wpcf7submit', function( event ) {
+    flsModules.popup.close('#service');
+    flsModules.popup.close('#service-page');
+    flsModules.popup.close('#ads');
+    flsModules.popup.open('#success');
+}, false );

@@ -5,7 +5,7 @@
 				<div class="popup__title">Заявка на услуги</div>
 				<button data-close type="button" class="popup__close"></button>
 			</div>
-			<form action="#" class="service__form form" data-dev data-popup-message="#success">
+			<form action="components/sendmail/sendmail.php" method="POST" class="service__form form" data-ajax data-popup-message="#success">
 				<div class="form__fields">
 					<select name="form[]" class="form__select" data-scroll="440">
 						<option value="" selected>Вид услуги</option>
@@ -57,9 +57,9 @@
 						<img src="@img/captcha.jpg" alt="" width="100%">
 					</div>
 					<div class="form__errored" style="">Заполните обязательные поля!</div>
-					<button type="button" class="button button_next">Отправить</button>
+					<button type="submit" class="button button_next">Отправить</button>
 				</div>
-				<div class="form__confirmation confirmation-form">
+				<!-- <div class="form__confirmation confirmation-form">
 					<div class="confirmation-form__title">Подтверждение заявки</div>
 					<div class="confirmation-form__text">Для подтверждения заявки, введите код отправленный вам через
 						SMS на номер указанный при подаче заявки</div>
@@ -67,7 +67,7 @@
 						placeholder="Введите код" class="input">
 
 					<button type="submit" class="button">Подтвердить</button>
-				</div>
+				</div> -->
 			</form>
 		</div>
 	</div>
@@ -107,9 +107,9 @@
 						<img src="@img/captcha.jpg" alt="" width="100%">
 					</div>
 					<div class="form__errored" style="">Заполните обязательные поля!</div>
-					<button type="button" class="button button_next">Отправить</button>
+					<button type="submit" class="button button_next">Отправить</button>
 				</div>
-				<div class="form__confirmation confirmation-form">
+				<!-- <div class="form__confirmation confirmation-form">
 					<div class="confirmation-form__title">Подтверждение заявки</div>
 					<div class="confirmation-form__text">Для подтверждения заявки, введите код отправленный вам через
 						SMS на номер указанный при подаче заявки</div>
@@ -117,7 +117,7 @@
 						placeholder="Введите код" class="input">
 
 					<button type="submit" class="button">Подтвердить</button>
-				</div>
+				</div> -->
 			</form>
 		</div>
 	</div>
@@ -157,9 +157,9 @@
 						<img src="@img/captcha.jpg" alt="" width="100%">
 					</div>
 					<div class="form__errored" style="">Заполните обязательные поля!</div>
-					<button type="button" class="button button_next">Отправить</button>
+					<button type="submit" class="button button_next">Отправить</button>
 				</div>
-				<div class="form__confirmation confirmation-form">
+				<!-- <div class="form__confirmation confirmation-form">
 					<div class="confirmation-form__title">Подтверждение заявки</div>
 					<div class="confirmation-form__text">Для подтверждения заявки, введите код отправленный вам через
 						SMS на номер указанный при подаче заявки</div>
@@ -167,7 +167,7 @@
 						placeholder="Введите код" class="input">
 
 					<button type="submit" class="button">Подтвердить</button>
-				</div>
+				</div> -->
 			</form>
 		</div>
 	</div>
