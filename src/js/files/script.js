@@ -166,7 +166,7 @@ if (mapPathes.length) {
 //========================================================================================================================================================
 
 
-document.addEventListener( 'wpcf7submit', function( event ) {
+document.addEventListener( 'wpcf7mailsent', function( event ) {
     flsModules.popup.close('#service');
     flsModules.popup.close('#service-page');
     flsModules.popup.close('#ads');

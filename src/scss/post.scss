@@ -1,19 +1,19 @@
 .post {
+
     // .post__container
-    &__container {
-    }
+    &__container {}
+
     // .post__date
     &__date {
         margin-bottom: rem(20);
         color: $blue;
     }
+
     // .post__title
-    &__title {
-    }
+    &__title {}
+
     // .post__thumb
     &__thumb {
-        margin-bottom: rem(34);
-        height: rem(300);
         background: #d9d9d9;
         border-radius: 6px;
         border-radius: 6px;
@@ -23,15 +23,18 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        @media (min-width: $tablet) {
-            height: rem(550);
+            object-position: center;
         }
     }
+
     // .post__content
     &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(30);
+
         line-height: math.div(22, 16);
+
         h2 {
             margin-bottom: rem(20);
             font-weight: 600;
@@ -65,9 +68,10 @@
             }
         }
     }
+
     // .post__text
-    &__text {
-    }
+    &__text {}
+
     // .post__steps
     &__steps {
         display: flex;
@@ -79,10 +83,12 @@
         }
     }
 }
+
 .steps-post {
+
     // .steps-post__text
-    &__text {
-    }
+    &__text {}
+
     // .steps-post__contacts
     &__contacts {
         padding: rem(26) rem(30);

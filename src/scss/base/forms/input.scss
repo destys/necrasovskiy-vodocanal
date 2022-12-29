@@ -9,13 +9,17 @@ textarea {
 	appearance: none;
 }
 .input {
-	margin-bottom: rem(25);
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	padding: rem(6) 0;
 	border-bottom: 1px solid $grey;
 	font-size: rem(16);
+
+	&.wpcf7-not-valid {
+		border-color: $red;
+	}
+	
 	&._focus {
 	}
 	&._error {

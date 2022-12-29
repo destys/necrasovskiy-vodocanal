@@ -1,18 +1,19 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+
+	&__row {}
+
+	&__column {}
+
+	&__line {}
+
+	&__input {}
+
+	&__button {}
+
+	&__error {}
+
 	&__errored {
 		opacity: 0;
 		transform: translate(0px, -100%);
@@ -28,24 +29,26 @@
 	}
 
 	// .form__fields
-	&__fields {
-	}
+	&__fields {}
+
 	// .form__select
-	&__select {
-	}
+	&__select {}
+
 	// .form__checkbox
-	&__checkbox {
-	}
+	&__checkbox {}
+
 	// .form__captcha
 	&__captcha {
 		margin-top: rem(45);
 		margin-bottom: rem(40);
 	}
+
 	// .form__confirmation
 	&__confirmation {
 		display: none;
 	}
 }
+
 //</FORM>
 
 // <BUTTONS>
