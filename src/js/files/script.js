@@ -115,8 +115,15 @@ const mapPathes = document.querySelectorAll('.map__image [data-num-place]'),
 
 if (mapPathes.length) {
 
-    selTitle.addEventListener('click', () => {
+    selTitle.addEventListener('click', (e) => {
+        console.log('e: ', e.target);
         selOptions.removeAttribute('hidden');
+    })
+
+    document.addEventListener('click', (e) => {
+        if (e.target != selTitle && e.target != mapSearch && e.target != document.querySelector('.select__value')) {
+            selOptions.setAttribute('hidden', 'true');
+        }
     })
 
     mapPathes.forEach(path => {
@@ -166,9 +173,20 @@ if (mapPathes.length) {
 //========================================================================================================================================================
 
 
-document.addEventListener( 'wpcf7mailsent', function( event ) {
+document.addEventListener('wpcf7mailsent', function (event) {
     flsModules.popup.close('#service');
     flsModules.popup.close('#service-page');
     flsModules.popup.close('#ads');
     flsModules.popup.open('#success');
-}, false );
+}, false);
+
+//========================================================================================================================================================
+
+const burgerOverlay = document.querySelector('.burger__overlay');
+
+if (burgerOverlay) {
+    burgerOverlay.addEventListener('click', () => {
+        document.querySelector('html').classList.remove('lock');
+        document.documentElement.classList.remove("menu-open");
+    })
+}
