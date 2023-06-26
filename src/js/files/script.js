@@ -116,7 +116,6 @@ const mapPathes = document.querySelectorAll('.map__image [data-num-place]'),
 if (mapPathes.length) {
 
     selTitle.addEventListener('click', (e) => {
-        console.log('e: ', e.target);
         selOptions.removeAttribute('hidden');
     })
 
@@ -189,4 +188,35 @@ if (burgerOverlay) {
         document.querySelector('html').classList.remove('lock');
         document.documentElement.classList.remove("menu-open");
     })
+}
+
+//========================================================================================================================================================
+const typeOfthePayerCompany = document.querySelector('input[name=payer-company]');
+const typeOfthePayerFio = document.querySelector('input[name=payer-fio]');
+const typeOfthePayerInn = document.querySelector('input[name=payer-inn]');
+const typeOfthePayerUserNum = document.querySelector('input[name=payer-usernumber]');
+
+if (typeOfthePayerCompany && typeOfthePayerFio && typeOfthePayerUserNum) {
+    typeOfthePayerCompany.style.display = 'none';
+    typeOfthePayerInn.style.display = 'none';
+    document.addEventListener("selectCallback", function (e) {
+        // Селект 
+        const currentSelect = e.detail.select;
+
+        if (currentSelect.name === 'type-of-the-payer' && currentSelect.options[currentSelect.selectedIndex].value === 'Физ лицо') {
+            typeOfthePayerCompany.style.display = 'none';
+            typeOfthePayerCompany.removeAttribute('required');
+            typeOfthePayerInn.style.display = 'none';
+            typeOfthePayerInn.removeAttribute('required');
+            typeOfthePayerFio.placeholder = 'ФИО*';
+            typeOfthePayerUserNum.placeholder = 'Номер лицевого счета';
+        } else {
+            typeOfthePayerCompany.style.display = 'block';
+            typeOfthePayerCompany.setAttribute('required', true);
+            typeOfthePayerInn.style.display = 'block';
+            typeOfthePayerInn.setAttribute('required', true);
+            typeOfthePayerFio.placeholder = 'ФИО контактного лица*';
+            typeOfthePayerUserNum.placeholder = 'Номер договора';
+        }
+    });
 }

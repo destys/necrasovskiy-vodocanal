@@ -53,7 +53,6 @@ body::after {
 }
 
 .popup {
-
 	// .popup__content
 	&__content {
 		visibility: hidden;
@@ -67,6 +66,14 @@ body::after {
 
 		.lock & {
 			visibility: visible;
+		}
+
+		.input {
+			margin-bottom: rem(20);
+		}
+
+		.form__checkbox {
+			margin-bottom: rem(20);
 		}
 	}
 
@@ -128,7 +135,6 @@ body::after {
 }
 
 .service {
-
 	// .service__form
 	&__form {
 		padding: rem(40) rem(30) rem(30);
@@ -197,7 +203,8 @@ body::after {
 	}
 
 	// .success__text
-	&__text {}
+	&__text {
+	}
 
 	// .success__link
 	&__link {

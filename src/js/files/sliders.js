@@ -117,7 +117,7 @@ function initSliders() {
 			modules: [Navigation, Scrollbar, Lazy],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 4,
+			slidesPerView: 3,
 			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
@@ -167,14 +167,11 @@ function initSliders() {
 					spaceBetween: 20,
 					autoHeight: true,
 				},
-				768: {
+				992: {
 					slidesPerView: 2,
 				},
-				992: {
+				1280: {
 					slidesPerView: 3,
-				},
-				1268: {
-					slidesPerView: 4,
 				},
 			},
 

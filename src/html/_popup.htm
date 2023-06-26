@@ -5,7 +5,8 @@
 				<div class="popup__title">Заявка на услуги</div>
 				<button data-close type="button" class="popup__close"></button>
 			</div>
-			<form action="components/sendmail/sendmail.php" method="POST" class="service__form form" data-ajax data-popup-message="#success">
+			<form action="components/sendmail/sendmail.php" method="POST" class="service__form form" data-ajax
+				data-popup-message="#success">
 				<div class="form__fields">
 					<select name="form[]" class="form__select" data-scroll="440">
 						<option value="" selected>Вид услуги</option>
@@ -43,6 +44,64 @@
 					<input autocomplete="off" type="email" name="form[]" data-error="Заполните обязательные поля"
 						placeholder="Почта" class="input">
 					<input autocomplete="off" type="text" name="form[]" data-error="Заполните обязательные поля"
+						placeholder="Номер лицевого счета" class="input">
+					<div class="form__checkbox">
+						<div class="checkbox">
+							<input id="c_1" data-error="Заполните обязательные поля" class="checkbox__input"
+								type="checkbox" value="1" name="form[]" checked>
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Соглашаюсь на
+									обработку
+									персональных данных </span></label>
+						</div>
+					</div>
+					<div class="form__captcha">
+						<img src="@img/captcha.jpg" alt="" width="100%">
+					</div>
+					<div class="form__errored" style="">Заполните обязательные поля!</div>
+					<button type="submit" class="button button_next">Отправить</button>
+				</div>
+				<!-- <div class="form__confirmation confirmation-form">
+					<div class="confirmation-form__title">Подтверждение заявки</div>
+					<div class="confirmation-form__text">Для подтверждения заявки, введите код отправленный вам через
+						SMS на номер указанный при подаче заявки</div>
+					<input autocomplete="off" type="text" name="form[]" data-error="Заполните обязательные поля"
+						placeholder="Введите код" class="input">
+
+					<button type="submit" class="button">Подтвердить</button>
+				</div> -->
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="verification-of-counters" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content service">
+			<div class="popup__header">
+				<div class="popup__title">Заявка на поверку счетчиков</div>
+				<button data-close type="button" class="popup__close"></button>
+			</div>
+			<form class="service__form form" data-dev
+				data-popup-message="#success">
+				<div class="form__fields">
+					<select name="type-of-the-payer" class="form__select" data-scroll="440">
+						<option value="" selected>Тип плательщика</option>
+						<option value="Физ лицо">Физ лицо</option>
+						<option value="Юр лицо">Юр лицо</option>
+					</select>
+					<input autocomplete="off" type="text" name="payer-company" data-required
+						data-error="Заполните обязательные поля" placeholder="Название компании*" class="input">
+						<input autocomplete="off" type="text" name="payer-inn" data-required
+						data-error="Заполните обязательные поля" placeholder="ИНН*" class="input">
+					<input autocomplete="off" type="text" name="payer-fio" data-required
+						data-error="Заполните обязательные поля" placeholder="ФИО*" class="input">
+					<input autocomplete="off" type="text" name="form[]" data-required
+						data-error="Заполните обязательные поля" placeholder="Адрес*" class="input">
+					<input autocomplete="off" type="tel" name="form[]" data-required
+						data-error="Заполните обязательные поля" placeholder="Номер телефона*" class="input">
+					<input autocomplete="off" type="email" name="form[]" data-error="Заполните обязательные поля"
+						placeholder="Почта" class="input">
+					<input autocomplete="off" type="text" name="payer-usernumber" data-error="Заполните обязательные поля"
 						placeholder="Номер лицевого счета" class="input">
 					<div class="form__checkbox">
 						<div class="checkbox">
